@@ -8,7 +8,6 @@ class cerealConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
     build_policy = "missing"
-    requires = 'gtest/1.8.0@lasote/stable'
     exports = "*"
 
     def package(self):
