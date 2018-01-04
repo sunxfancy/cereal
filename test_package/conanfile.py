@@ -13,8 +13,8 @@ class LibtestConan(ConanFile):
 
     def build(self):
         self.cmake = CMake(self)
-        self.cmake.configure(self, source_dir=self.conanfile_directory, build_dir="./")
-        self.cmake.build(self)
+        self.cmake.configure(source_dir=self.conanfile_directory, build_dir="./")
+        self.cmake.build()
 
     def test(self):
         self.run(os.sep.join([".","bin", "libtest"]))
