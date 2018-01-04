@@ -2,7 +2,7 @@ from conans import ConanFile, CMake, tools
 
 class cerealConan(ConanFile):
     name = "cereal"
-    version = "1.2.2"
+    version = "1.2.3"
     license = "BSD license"
     url = "<Package recipe repository url here, for issues about the package>"
     settings = "os", "compiler", "build_type", "arch"

@@ -7,12 +7,12 @@ username = os.getenv("CONAN_USERNAME", "sunxfancy")
 
 class LibtestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "cereal/1.2.2@%s/%s" % (username, channel)
+    requires = "cereal/1.2.3@%s/%s" % (username, channel)
     generators = "cmake"
     build_policy = "missing"
 
     def build(self):
-        self.cmake = CMake(self.settings)
+        self.cmake = CMake(self)
         self.cmake.configure(self, source_dir=self.conanfile_directory, build_dir="./")
         self.cmake.build(self)
 
